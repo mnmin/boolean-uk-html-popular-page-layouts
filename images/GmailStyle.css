@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+
+    display: grid;
+    grid-template:
+    "search-mail search-mail search-mail" 0.5fr
+    "compose main quick-settings" 5fr
+    "meet main theme" 2fr
+    "chat main inbox-type" 3fr /
+    3fr 6fr 3fr;
+}
+
+.search-mail {
+    grid-area: search-mail;
+    text-align: center;
+
+    background-color: blanchedalmond;
+}
+
+.compose {
+    grid-area: compose;
+    text-align: center;
+
+    background-color: red;
+}
+
+.main {
+    grid-area: main;
+    text-align: center;
+
+    background-color: aquamarine;
+}
+
+.quick-settings {
+    grid-area: quick-settings;
+    text-align: center;
+
+    background-color: blueviolet;
+}
+
+.meet {
+    grid-area: meet;
+    text-align: center;
+
+    background-color: rgb(9, 247, 247);
+}
+
+.theme {
+    grid-area: theme;
+    text-align: center;
+
+    background-color: rgb(203, 228, 133);
+}
+
+.chat   {
+    grid-area: chat;
+    text-align: center;
+
+    background-color: green;
+}
+
+.inbox-type {
+    grid-area: inbox-type;
+    text-align: center;
+
+    background-color: yellow;
+}
+
+@media screen and (max-width: 800px) {
+    .container {
+      grid-template:
+      "search-mail search-mail" 0.5fr
+      "compose main" 5fr
+      "meet main" 2fr
+      "chat main" 3fr /
+      3fr 6fr;
+    }
+
+    .theme {
+        display: none;
+    }
+
+    .quick-settings {
+        display: none;
+    }
+
+    .inbox-type {
+        display: none;
+    }
+
+   }

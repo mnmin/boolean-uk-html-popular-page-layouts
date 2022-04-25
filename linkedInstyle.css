@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+
+    display: grid;
+    grid-template: 
+    "search-box search-box search-box" 0.2fr
+    "left-header main-header right-header" 1fr
+    "left-menu  main right-menu" 2fr
+    "left-footer main-footer right-footer" 0.5fr /
+    0.6fr 3fr 0.8fr;
+
+    border: solid   white;
+
+}
+
+.search-box {
+    grid-area: search-box;
+    text-align: center;
+
+    background-color: teal;
+}
+
+.left-header {
+    grid-area: left-header;
+
+    background-color: aquamarine;
+}
+
+.main-header {
+    grid-area: main-header;
+
+    background-color: rgb(95, 95, 206);
+}
+
+.right-header {
+    grid-area: right-header;
+
+    background-color: rgb(45, 45, 240);
+}
+
+.left-menu {
+    grid-area: left-menu;
+
+    background-color: orange;
+}
+
+.main {
+    grid-area: main;
+
+    background-color: red;
+}
+
+.right-menu {
+    grid-area: right-menu;
+
+    background-color: magenta;
+}
+
+.left-footer {
+    grid-area: left-footer;
+
+    background-color: green;
+}
+
+.main-footer {
+    grid-area: main-footer;
+    
+    background-color: gray;
+}
+
+.right-footer {
+    grid-area: right-footer;
+
+    background-color: greenyellow;
+}
+
+@media screen and (max-width: 800px) {
+    .container {
+      grid-template:
+      "search-box search-box" 0.2fr
+      "left-header main-header" 1fr
+      "left-menu  main" 2fr
+      "left-footer main-footer" 0.5fr /
+      0.6fr 3fr;
+  
+      border: solid   white;
+    }
+
+    .right-header {
+        display: none;
+    }
+
+    .right-menu {
+        display: none;
+    }
+
+    .right-footer {
+        display: none;
+    }
+
+   }
+
+@media screen and (max-width: 499px) {
+    .container {
+      grid-template:
+      "search-box" 0.2fr
+      "main" 2fr /
+      3fr;
+  
+      border: solid   white;
+    }
+
+.left-header {
+    display: none;
+}
+
+.left-menu {
+    display: none;
+}
+
+.left-footer {
+    display: none;
+}
+
+.main-header {
+    display: none;
+}
+
+.main-footer {
+    display: none;
+}
+
+
+}
+   
